@@ -1,0 +1,32 @@
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dot {
+  @apply absolute rounded-full;
+  width: 4px;
+  height: 4px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.dot-medium {
+  @apply absolute rounded-full;
+  width: 6px;
+  height: 6px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.dot-large {
+  @apply absolute rounded-full;
+  width: 8px;
+  height: 8px;
+  animation: float 10s ease-in-out infinite;
+} 

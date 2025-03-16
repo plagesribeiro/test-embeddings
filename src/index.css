@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-800 rounded-xl shadow-md p-6 transition-all border border-gray-700;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-700 text-gray-200 border border-gray-600 hover:bg-gray-600;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom background styling */
+.dot {
+  @apply absolute rounded-full;
+  width: 4px;
+  height: 4px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.dot-medium {
+  @apply absolute rounded-full;
+  width: 6px;
+  height: 6px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.dot-large {
+  @apply absolute rounded-full;
+  width: 8px;
+  height: 8px;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-blue-900 to-purple-900;
+}
+
+/* Custom colors that may not be in Tailwind by default */
+.bg-gray-750 {
+  background-color: #2d3748;
+}
+
+.bg-gray-850 {
+  background-color: #1a202c;
+}
+
+input, textarea {
+  @apply bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Add monospace font styling */
+.font-mono {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+html, body {
+  @apply overflow-x-hidden;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
